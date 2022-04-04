@@ -43,7 +43,6 @@ public class ValidationCheckTest {
         SelenideElement form = $("form");
         form.$("[data-test-id=name] input").setValue("Петров-Водкин Кузьма");
         form.$("[data-test-id=phone] input").setValue("123asd");
-
         form.$("[data-test-id=agreement] span").click();
         form.$("button").click();
         $("[data-test-id=phone] span.input__sub").shouldHave(Condition.exactText(
